@@ -1,5 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons';
-import Checkbox from 'expo-checkbox';
+import ExpoCheckbox from 'expo-checkbox';
 import { useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Alert, Linking, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
@@ -191,7 +191,7 @@ function InfoRow({
 function DangerItem({ label, checked }: { label: string; checked: boolean }) {
   return (
     <View style={styles.dangerItem}>
-      <Checkbox
+      <ExpoCheckbox
         value={checked}
         disabled
         color={checked ? colors.difficultyDemanding : undefined}

@@ -8,13 +8,15 @@ Zgrajeno z Expo (SDK 57), React Native in TypeScriptom. Vmesnik je v slovenšči
 
 ## Zahteve
 
-- Node.js 20+ (razvito na 24 LTS)
+- Node.js 22.13+; priporočena je različica 24 LTS (`nvm use` uporabi priloženi `.nvmrc`)
+- Node.js 23 ni podprt v Expo SDK 57 / React Native 0.86
 - Telefon z aplikacijo **Expo Go** ali emulator
 - Za pravo analizo slike še: ključ za Claude API (samo na strežniku)
 
 ## Zagon aplikacije
 
 ```bash
+nvm use                    # če uporabljaš nvm; izbere Node 24
 npm install
 npx expo start
 ```

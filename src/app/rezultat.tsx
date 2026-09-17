@@ -41,7 +41,7 @@ function formatHours(h: number) {
 export default function RezultatScreen() {
   const router = useRouter();
   const params = useLocalSearchParams<{ photoUri?: string; zones?: string }>();
-  const { myPlants, addPlant, hasPlant } = useMyPlants();
+  const { addPlant, hasPlant } = useMyPlants();
 
   const zones: Zone[] = useMemo(() => {
     try {

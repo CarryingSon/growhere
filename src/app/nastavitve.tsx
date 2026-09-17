@@ -62,7 +62,7 @@ export default function NastavitveScreen() {
           <Text style={styles.cardHint}>
             Želena ura opomnikov. Opomniki se ponavljajo na toliko dni, kot jih rastlina potrebuje v tem letnem
             času, in se sprožijo ob uri, ko si nazadnje zalil oziroma vklopil opomnik — izbrana ura je zato le
-            želja, ki jo dosežeš, če ob njej potrdiš "Zalil sem".
+            želja, ki jo dosežeš, če ob njej potrdiš “Zalil sem”.
           </Text>
           <View style={styles.hourGrid}>
             {HOURS.map((hour) => {

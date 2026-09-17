@@ -1,6 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Animated, Easing, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
 import { Button } from '@/components/Button';
@@ -24,7 +24,7 @@ export default function AnalizaScreen() {
 
   const [status, setStatus] = useState<Status>('loading');
   const [errorMessage, setErrorMessage] = useState('');
-  const progress = useRef(new Animated.Value(0)).current;
+  const [progress] = useState(() => new Animated.Value(0));
   const [progressPercent, setProgressPercent] = useState(8);
 
   const windowDeg = Number(params.direction ?? '0');
@@ -66,7 +66,11 @@ export default function AnalizaScreen() {
   };
 
   useEffect(() => {
-    runAnalysis();
+    const timeoutId = setTimeout(runAnalysis, 0);
+    return () => {
+      clearTimeout(timeoutId);
+      progress.stopAnimation();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

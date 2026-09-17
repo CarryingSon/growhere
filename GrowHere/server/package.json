@@ -1,0 +1,18 @@
+{
+  "name": "growhere-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Strežnik za analizo slike sobe za aplikacijo GrowHere.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
